@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shkredov Dmitrii</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: cornflowerblue;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 100px rgba(1, 1, 111, 11);
+            text-align: center;
+        }
+        .feedback {
+            margin-top: 20px;
+        }
+        .feedback button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Shkredov Dmitrii</h1>
+        <p><a href="cv.html" target="_blank">See CV</a></p>
 
+        <div class="feedback" id="feedback-section">
+            <p>Did you like my resume?</p>
+            <button onclick="giveFeedback('yes')">Yes</button>
+            <button onclick="giveFeedback('no')">No</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function giveFeedback(answer) {
+            document.getElementById("response").innerText = "Thank you!";
+            document.getElementById("feedback-section").style.display = "none";
+        }
+    </script>
 </body>
 </html>
